@@ -52,7 +52,7 @@ usr1 = []
 usr2 = []
 timeCountUsr1 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 timeCountUsr2 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-chat = open("WhatsApp Chat with Elizabeth Guile.txt",'r')
+chat = open("whats app text data file",'r')
 for x in chat.readlines():
 	line = x.split()
 	print(line)
@@ -67,7 +67,7 @@ for x in chat.readlines():
 	time = "%s %s" % (line[1],line[2])
 	a= Message(sender, msg, date, time)
 	curTime = a.getTime()
-	if a.getSender() == "Elizabeth":
+	if a.getSender() == "person1":
 		usr1 += [curTime]
 		if curTime < 100 and curTime > 0:
 			timeCountUsr1[0] +=1
@@ -117,7 +117,7 @@ for x in chat.readlines():
 			timeCountUsr1[22] +=1
 
 
-	if a.getSender() == "Desmond":
+	if a.getSender() == "person2":
 		usr2 += [curTime]
 		if curTime < 100 and curTime > 0:
 			timeCountUsr2[0] +=1
